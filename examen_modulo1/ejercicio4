@@ -1,0 +1,10 @@
+#!/bin/bash
+if [ $# = 1]
+  then
+    if test -w ./$1
+      then cat $1
+    else echo "No tengo permisos de escritura"
+    fi
+else
+  echo "Por favor, introduce solo un parametro"
+fi

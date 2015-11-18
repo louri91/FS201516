@@ -1,0 +1,11 @@
+#!/bin/bash
+if [ $# = 1]
+  then
+    if test -d $1
+      then cp -r ./* ./$1
+    else mkdir $1
+      cp -r ./* ./$1
+    fi
+else
+  echo "Por favor, introduce solo un parámetro"
+fi
